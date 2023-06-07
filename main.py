@@ -50,7 +50,7 @@ stream = llm(
 buffer = ""
 for output in stream:
     completion_fragment = copy.deepcopy( output )
-    fragment = completion_fragment.get('choices', [])[0]['text']
+    fragment = completion_fragment['choices'][0]['text']  # type: ignore
     buffer += fragment  # add fragment to buffer
     if not buffer[-1].isalnum():  # if the last character in buffer is not alphanumeric, print buffer
         print(buffer, end='')
