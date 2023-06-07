@@ -15,7 +15,7 @@ llm = Llama( model_path=model_pth )
 log.debug( 'model loaded.' )
 
 ## ask user for input and store it to variable ----------------------
-user_input = input( 'Your input (hit return when done): ' )
+user_input = input( '\nYour input (hit return when done): ' )
 log.debug( f'user_input, ``{user_input}``' )
 
 ## run model --------------------------------------------------------
@@ -58,10 +58,11 @@ for output in stream:
         # log.debug( 'segment printed' )
         buffer = ""
         # time.sleep( .25 )
+log.debug( f'stream done; buffer, ``{buffer}``' )
 if buffer:  # print any remaining text in buffer
     log.debug( f'remaining buffer, ``{buffer}``' )
     print(buffer)
-    
+
 log.debug( 'model run complete.' )
 
 ## tutorial ---
