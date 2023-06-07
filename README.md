@@ -24,6 +24,38 @@ $ python ./main.py
 
 No settings needed. Note that the model is expected to be put in a `models` directory at the sibling-level of the `ml_local_llms_project` directory.
 
+# example output
+
+    Your input (hit return when done): What are the rules of pickleball?
+    [07/Jun/2023 07:09:23] DEBUG [main-<module>()::19] user_input, ``What are the rules of pickleball?``
+    [07/Jun/2023 07:09:23] DEBUG [main-<module>()::22] Running model...
+    The
+    rules
+    of
+    pick
+    leball are
+    designed
+    to
+    ensure
+    that
+    the
+    game
+    is
+    played
+    in
+    a
+    fair
+    and
+    enjoy
+    able manner
+    , while
+    also
+    prom
+    oting safety
+    and
+    sport
+    smanship.
+
 # notes
 
 - I spent some time trying to get the ouput to print in teletype fashion. I had initially wanted to print word-by-word, but not all fragments are full words. I settled for looking for the presence of a space. Not perfect, but fine for now.
